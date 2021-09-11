@@ -71,4 +71,14 @@ sudo usermod -aG docker [ubuntu 사용자 계정 이름]
     ```
     <img  src="./img/docker_version.png" width="300px">
 
+### docker 명령어 설명
+- `docker run [OPTIONS] image[:tag|@DIGEST] [COMMAND] [ARG...]`: run 컨테이너 실행
+- `docker search [OPTION] [검색어]`: 검색어에 대한 도커 이미지를 검색할 수 있다.
+- `docker run ubuntu:20.04`: ubuntu 20.04 컨테이너 만들기
+- `docker run --rm -it ubuntu:20.04 /bin/sh`: 컨테이너에 shell 커맨드로 들어가진다. --rm 때문에 나감과 동일시 저절로 삭제되어 진다.
+- `docker run --rm -p 5678:5678 hashicorp/http-echo -text="hello word"`: 컨테이너 포트를 호스트 포트로 연결해서 브라우저에 localhost:5678에 접속하면 메시지를 볼 수 있다.
+- `docker run --rm -p 1234:6379 redis`: Redis 라는 메모리기반 DB를 실행한다.
+    <img src="./img/docker_telnet.PNG" />
+    - 성공적으로 실행하였다면 다음과 같이 보이는 것을 확인할 수 있다.
+
 
