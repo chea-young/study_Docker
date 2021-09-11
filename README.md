@@ -72,6 +72,7 @@ sudo usermod -aG docker [ubuntu 사용자 계정 이름]
     <img  src="./img/docker_version.png" width="300px">
 
 ### docker 명령어 설명
+#### RUN 명령어
 - `docker run [OPTIONS] image[:tag|@DIGEST] [COMMAND] [ARG...]`: run 컨테이너 실행
 - `docker search [OPTION] [검색어]`: 검색어에 대한 도커 이미지를 검색할 수 있다.
 - `docker run ubuntu:20.04`: ubuntu 20.04 컨테이너 만들기
@@ -80,5 +81,16 @@ sudo usermod -aG docker [ubuntu 사용자 계정 이름]
 - `docker run --rm -p 1234:6379 redis`: Redis 라는 메모리기반 DB를 실행한다.
     <img src="./img/docker_telnet.PNG" />
     - 성공적으로 실행하였다면 다음과 같이 보이는 것을 확인할 수 있다.
+#### PS. STOP, RM, LOGS, IMAGES .. 명령
+- `docker ps`: 실행 중인 컨테이너 목록을 확인하는 명령어이다.
+- `docker ps -a`: 중지 된 컨테이너를 확인한다.
+- `docker [OPTION] [container_id]`: 실행 중인 컨테이너를 중지하는 명령어로 하나 또는 여러개를 중지할 수 있다.
+- `docker rm [OPTION] [container_id]`: 중지 된 컨테이너는 저절로 삭제가 안되기 때문에 다음과 같은 커맨드를 이요하여 종료된 컨테이너를 완전히 제거해야 한다.
+- `docker logs [OPTION] [container_id]`: 컨테이너가 정상적으로 동작하는지 확인하는 방법으로 기본 옵션 -f, -tail을 사용할 수 있다.
+- `docker images [OPTION] [REPOSITORY[:TAG]]`: 도커가 다운로드한 이미지 목록을 보는 명령어이다.
+- `docker pull [OPTIONS] NAME[:TAG|@DIGEST]`: 이미지를 다운로드하는 명령어이다.
+- `docker rmi [OPTION] [image_id]`: 이미지를 삭제하는 방법이다. 하지만 컨테이너가 실행 중인 이미지는 삭제되지 않는다.
+- `docker network create [OPTION] [생성할 network이름]`: 도커 컨테이너끼리 이름으로 통신할 수 있는 가상 네트워크를 만든다.
+- `docker network connect [OPTION] [network 이름] [network에 연결할 container이름]`: 기존에 생성된 컨테이너에 네트워크를 추가한다.
 
 
