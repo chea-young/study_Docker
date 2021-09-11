@@ -10,6 +10,10 @@ Docker 공부를 하면서 정리하는 Repository
 - 컨테이너는 가상머신처럼 독립적으로 실행되지만 빠르고, 쉽고, 효율적이다.
 - 격리된 환경에서 작동하는 프로세스로 리눅스 커널의 여러 기술을 활용한다.
 - 하드웨어 가상화 기술보다 가볍고, 이미지 단위로 프로세스 실행 환경을 구성한다.
+- Client-Server 구조
+    <img>
+
+    - docker CLI는 도커 호스트에 명령을 전다하고 결과를 받아 출력한다.
 - 특징 
     - 확장성/이식성: 도커가 설치되어 있다면 어디서든 컨테이너를 실행할 수 있고 쉽게 개발서버를 만들 수 있고 테스트 서버 생성도 간편하다.
     - 표준성: 컨테이너라는 표준으로 서버를 배포하므로 모든 서비스들의 배포과정이 동일해진다.
@@ -53,4 +57,18 @@ Docker 공부를 하면서 정리하는 Repository
 #### 상태관리 도구
 - 어떤 명령를 입력하였는지 문서화하였다고 하면 어떤 설정 파일로 관리를 해 그 프로그램을 돌리면 설정이 사람이 돌리는 것처럼해서 서버를 관리하는 것이다.
 - CHEF, puppet labs, ANSIBLE
+
+### Docker Installation
+- Linux Ubuntu 경우
+```
+curl -fsSL https://get.docker.com/ | sudo sh
+sudo usermod -aG docker [ubuntu 사용자 계정 이름]
+```
+- 설치 확인법
+    다음과 같이 입력 시 다음 창이 뜬다.
+    ```
+    docker version
+    ```
+    <img  src="./img/docker_version.png" width="300px">
+
 
