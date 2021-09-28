@@ -93,12 +93,13 @@ sudo usermod -aG docker [ubuntu 사용자 계정 이름]
 - `docker network create [OPTION] [생성할 network이름]`: 도커 컨테이너끼리 이름으로 통신할 수 있는 가상 네트워크를 만든다.
 - `docker network connect [OPTION] [network 이름] [network에 연결할 container이름]`: 기존에 생성된 컨테이너에 네트워크를 추가한다.
 #### Volume 명령어
-- `docker run -d -p 3306:3306
+``` docker run -d -p 3306:3306
     -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
     --network=app-network \
     --name mysql \
     -v [컨테이너 데이터를 옮길 로컬 디렉토리 경로]
-    mysql:5.7`
+    mysql:5.7
+```
     : 가상 컨테이너에 존재하는 데이터는 컨테이너가 삭제될 때 같이 제거되는데 -v 옵션을 이용하면 그 데이터를 해당 디렉토리에 저장에 컨테이너를 삭제하더라도 데이터가 남아있고 사용할 수 있다.
 
 ### Docker compose
