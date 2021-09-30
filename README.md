@@ -180,3 +180,9 @@ docker run -p 3001:3000 web
     docker push [ID]/example
     docker pull [ID]/example
     ```
+### Container Deploy
+- 배포하기
+```
+docker run -d -p 3000:3000 [이미지]
+```
+    - Container 실행: 이미지 pull + Container start
