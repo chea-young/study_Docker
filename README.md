@@ -152,3 +152,21 @@ docker build -t [이름공간]/[이미지이름]:[태그] .
 - `USER`: RUN, CMD, ENTRYPOINT를 실행하는 사용이다.
 - `LABEL`: key-value 데이터이다.
 - `ONBUILD`; 다른 빌드의 베이스로 사용될 때 사용하는 명령어이다.
+#### 실습-예시 웹 애플리케이션으로 Docker Image 만들기
+- node.js 설정
+```
+sudo apt-get install npm
+npm init
+npm i fastify --save
+
+```
+- app.js 작성
+- Dockerfile 작성
+- .dockerignore 작성
+- build 하기
+```
+docker build -t web .
+docker run -p 3001:3000 web
+```
+- [localhost:3001]로 웹 사이트 켜보기
+- 확인 가능
