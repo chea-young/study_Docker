@@ -170,3 +170,13 @@ docker run -p 3001:3000 web
 ```
 - [localhost:3001]로 웹 사이트 켜보기
 - 확인 가능
+
+### Docker Hub
+- 동작
+    - Docker Hub 회원가입 [hub.docker.com]
+    - 이미지 저장 및 불러오기
+    ```
+    docker login
+    docker push [ID]/example
+    docker pull [ID]/example
+    ```
