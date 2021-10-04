@@ -8,7 +8,8 @@ https://hub.docker.com/_/ghost
 - 이미지: ghost:latest
 - 리스닝포트: 2368
 - 데이터저장: /var/lib/ghost/content
-- 실습내용
+
+### 실습내용
 #### <조건>
 - 60000 포트로 오픈합니다.
 - 업로드 데이터가 유실되지 않게 볼륨을 마운트 합니다.
