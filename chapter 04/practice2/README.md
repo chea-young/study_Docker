@@ -26,4 +26,9 @@
 - docker-compose.yml 파일로 작성합니다.
 
 ### 정답
-- 
+- 1. docker-compose.yml 작성
+2. RUN
+```
+docker-compose up
+```
+3. [localhost:62000] 접속
