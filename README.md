@@ -46,14 +46,18 @@ Docker 공부를 하면서 정리하는 Repository
 - 프로세스가 실행되는 파일들의 집합인 즉, 환경이다.
 - 이미지는 Only Read와 Writable로 나눠진다.
     - Only Read
-        <img - >
+
+        <img />
         - Base Image: 수정이 불가능하다.
-        <img>
+
+        <img/>
+
         - git을 설치하여 새로운 기능을 추가하여 commit하면 새로운 이미지를 만들 수 있게 된다.
 
     - Writable
 - 도커 이미지 규칙
-    <img>
+
+    <img/>
 
 ### VM vx Docker
 <img>
@@ -114,7 +118,7 @@ sudo usermod -aG docker [ubuntu 사용자 계정 이름]
     -v [컨테이너 데이터를 옮길 로컬 디렉토리 경로]
     mysql:5.7
 ```
-    : 가상 컨테이너에 존재하는 데이터는 컨테이너가 삭제될 때 같이 제거되는데 -v 옵션을 이용하면 그 데이터를 해당 디렉토리에 저장에 컨테이너를 삭제하더라도 데이터가 남아있고 사용할 수 있다.
+- 가상 컨테이너에 존재하는 데이터는 컨테이너가 삭제될 때 같이 제거되는데 -v 옵션을 이용하면 그 데이터를 해당 디렉토리에 저장에 컨테이너를 삭제하더라도 데이터가 남아있고 사용할 수 있다.
 
 ### Docker compose
 - 직접 커맨드를 작성하는 대신 이렇게 파일을 작성해서 생성하는 것도 가능하다.
@@ -158,12 +162,12 @@ docker build -t [이름공간]/[이미지이름]:[태그] .
 sudo apt-get install npm
 npm init
 npm i fastify --save
-
 ```
 - app.js 작성
 - Dockerfile 작성
 - .dockerignore 작성
 - build 하기
+
 ```
 docker build -t web .
 docker run -p 3001:3000 web
@@ -180,6 +184,7 @@ docker run -p 3001:3000 web
     docker push [ID]/example
     docker pull [ID]/example
     ```
+    
 ### Container Deploy
 - 배포하기
 ```
